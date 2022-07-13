@@ -3617,7 +3617,7 @@ jab_data* decodeJABCodeEx(jab_bitmap* bitmap, jab_int32 mode, jab_int32* status,
 			free(symbols[i].palette);
 			free(symbols[i].data);
 		}
-        return NULL;
+        return NULL; // none detected
 	}
 	if(mode == COMPATIBLE_DECODE && res == 0)
 	{

@@ -87,7 +87,7 @@ typedef struct {
 */
 typedef struct {
 	jab_int32	length;
-	jab_char	data[];
+	jab_char	data[1];
 }jab_data;
 
 /**
@@ -99,7 +99,7 @@ typedef struct {
    jab_int32	bits_per_pixel;
    jab_int32	bits_per_channel;
    jab_int32	channel_count;
-   jab_byte		pixel[];
+   jab_byte		pixel[1];
 }jab_bitmap;
 
 /**
@@ -172,5 +172,6 @@ extern jab_boolean saveImage(jab_bitmap* bitmap, jab_char* filename);
 extern jab_boolean saveImageCMYK(jab_bitmap* bitmap, jab_boolean isCMYK, jab_char* filename);
 extern jab_bitmap* readImage(jab_char* filename);
 extern void reportError(jab_char* message);
+extern char* jab_data2char(jab_data* data);
 
 #endif

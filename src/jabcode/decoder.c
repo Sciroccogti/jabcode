@@ -1830,3 +1830,8 @@ jab_data* decodeData(jab_data* bits)
 	free(decoded_bytes);
 	return decoded_data;
 }
+
+char* jab_data2char(jab_data* data)
+{
+	return (char*)data->data;
+}
